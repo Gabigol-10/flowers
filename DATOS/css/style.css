@@ -144,3 +144,191 @@ body::after {
 body {
     background: linear-gradient(135deg, #1a0a1a 0%, #2d0a2d 50%, #1a0a1a 100%);
 }
+
+/* Contenedor de corazones */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0;
+    animation: float-up 12s infinite ease-in;
+}
+
+.heart-1 {
+    left: 5%;
+    animation-delay: 0s;
+    font-size: 2.5rem;
+    color: #FF1744;
+}
+
+.heart-2 {
+    left: 15%;
+    animation-delay: 2s;
+    font-size: 1.8rem;
+    color: #FF69B4;
+}
+
+.heart-3 {
+    left: 25%;
+    animation-delay: 4s;
+    font-size: 2.2rem;
+    color: #DC143C;
+}
+
+.heart-4 {
+    left: 35%;
+    animation-delay: 1s;
+    font-size: 1.5rem;
+    color: #FF1744;
+}
+
+.heart-5 {
+    left: 45%;
+    animation-delay: 3s;
+    font-size: 2rem;
+    color: #FF69B4;
+}
+
+.heart-6 {
+    left: 55%;
+    animation-delay: 5s;
+    font-size: 1.7rem;
+    color: #DC143C;
+}
+
+.heart-7 {
+    left: 65%;
+    animation-delay: 2.5s;
+    font-size: 2.3rem;
+    color: #FF1744;
+}
+
+.heart-8 {
+    left: 75%;
+    animation-delay: 4.5s;
+    font-size: 1.9rem;
+    color: #FF69B4;
+}
+
+.heart-9 {
+    left: 85%;
+    animation-delay: 1.5s;
+    font-size: 2.1rem;
+    color: #DC143C;
+}
+
+.heart-10 {
+    left: 95%;
+    animation-delay: 3.5s;
+    font-size: 1.6rem;
+    color: #FF1744;
+}
+
+@keyframes float-up {
+    0% {
+        bottom: -10%;
+        opacity: 0;
+        transform: translateX(0) rotate(0deg);
+    }
+    10% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.9;
+        transform: translateX(20px) rotate(180deg);
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        bottom: 110%;
+        opacity: 0;
+        transform: translateX(-20px) rotate(360deg);
+    }
+}
+
+/* Estrellas brillantes */
+.stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+.star-1 {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.star-3 {
+    top: 70%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.star-4 {
+    top: 80%;
+    right: 25%;
+    animation-delay: 0.5s;
+}
+
+.star-5 {
+    top: 40%;
+    left: 5%;
+    animation-delay: 1.5s;
+}
+
+.star-6 {
+    top: 50%;
+    right: 8%;
+    animation-delay: 2.5s;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/* Efecto de brillo en el fondo */
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ajuste del z-index para que el contenido esté por encima */
+.greetings, .description, .button {
+    position: relative;
+    z-index: 10;
+}
